@@ -17,7 +17,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Razeen Ali – Full-Stack Engineer | AI-Native Apps & Web SaaS",
   description:
-    "Full-stack engineer shipping AI-native mobile apps and web SaaS. React Native, Expo, Supabase, AI agents. Toronto.",
+    "Full-stack engineer shipping AI-native mobile apps and web SaaS. React Native, Expo, AI agents. Toronto.",
   authors: [{ name: "Razeen Ali" }],
   openGraph: {
     title: "Razeen Ali – Full-Stack Engineer",

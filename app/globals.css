@@ -31,3 +31,19 @@ body {
 ::selection {
   background: color-mix(in srgb, var(--sage) 35%, white);
 }
+
+.card-flat {
+  border: 1px solid rgb(26 26 26 / 0.1);
+  background: #fff;
+  box-shadow: 3px 3px 0 rgb(26 26 26 / 0.06);
+}
+
+.btn-flat {
+  border: 1px solid rgb(26 26 26 / 0.12);
+  box-shadow: 2px 2px 0 rgb(26 26 26 / 0.08);
+}
+
+.btn-flat:active {
+  box-shadow: 1px 1px 0 rgb(26 26 26 / 0.08);
+  transform: translate(1px, 1px);
+}

@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import { Check, Copy, Play, Terminal } from "lucide-react";
 import { curlSummary, site } from "@/lib/data";
 import { Section } from "./Section";
@@ -27,13 +26,7 @@ export function CurlTerminal() {
     setOutput("");
     setShowCursor(true);
 
-    const lines = [
-      `$ ${site.curlCommand}`,
-      "",
-      ...curlSummary.split("\n"),
-      "",
-    ];
-
+    const lines = [`$ ${site.curlCommand}`, "", ...curlSummary.split("\n"), ""];
     let lineIndex = 0;
     let charIndex = 0;
     let current = "";
@@ -57,7 +50,7 @@ export function CurlTerminal() {
         lineIndex += 1;
         charIndex = 0;
       }
-    }, 12);
+    }, 18);
   }, [running]);
 
   useEffect(() => {
@@ -70,17 +63,17 @@ export function CurlTerminal() {
     <Section
       id="terminal"
       title="For the terminal enjoyers"
-      subtitle="Copy the command. Pretend you're in prod. Get the gist."
+      subtitle="Copy it. Run it. Done."
     >
       <div className="space-y-4">
-        <div className="rounded-xl border border-ink/10 bg-ink/[0.03] p-4 sm:p-5">
+        <div className="card-flat p-4 sm:p-5">
           <code className="block font-mono text-sm sm:text-base text-ink break-all">
             {site.curlCommand}
           </code>
           <button
             type="button"
             onClick={copyCommand}
-            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-sage px-4 py-2 text-sm font-medium text-white transition hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+            className="btn-flat mt-4 inline-flex items-center gap-2 bg-sage px-4 py-2 text-sm font-medium text-white hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
           >
             {copied ? (
               <>
@@ -96,16 +89,11 @@ export function CurlTerminal() {
           </button>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="overflow-hidden rounded-xl border border-ink/15 bg-[#1a1a1a] shadow-lg"
-        >
+        <div className="card-flat overflow-hidden border-ink/15 bg-[#1a1a1a] shadow-[4px_4px_0_rgb(26_26_26_/_0.12)]">
           <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
-            <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-            <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
-            <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+            <span className="h-2.5 w-2.5 bg-[#ff5f57]" />
+            <span className="h-2.5 w-2.5 bg-[#febc2e]" />
+            <span className="h-2.5 w-2.5 bg-[#28c840]" />
             <span className="ml-2 flex items-center gap-1.5 text-xs text-white/50 font-mono">
               <Terminal className="h-3.5 w-3.5" aria-hidden />
               zsh — razeenali.com
@@ -113,17 +101,15 @@ export function CurlTerminal() {
           </div>
 
           <div
-            className="min-h-[280px] p-4 sm:p-5 font-mono text-sm sm:text-[15px] text-[#e8e8e8] leading-relaxed whitespace-pre-wrap"
+            className="min-h-[260px] p-4 sm:p-5 font-mono text-sm sm:text-[15px] text-[#e8e8e8] leading-relaxed whitespace-pre-wrap"
             aria-live="polite"
             aria-label="Terminal output"
           >
             {output || (
-              <span className="text-white/40">
-                hit run. i&apos;ll type the summary for you.
-              </span>
+              <span className="text-white/40">press run.</span>
             )}
             {showCursor ? (
-              <span className="inline-block w-2 h-4 ml-0.5 bg-sage animate-pulse align-middle" />
+              <span className="inline-block w-2 h-4 ml-0.5 bg-sage align-middle" />
             ) : null}
           </div>
 
@@ -132,13 +118,13 @@ export function CurlTerminal() {
               type="button"
               onClick={runCommand}
               disabled={running}
-              className="inline-flex items-center gap-2 rounded-lg bg-sage px-4 py-2 text-sm font-medium text-white transition hover:bg-sage-dark disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+              className="btn-flat inline-flex items-center gap-2 bg-sage px-4 py-2 text-sm font-medium text-white hover:bg-sage-dark disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
             >
               <Play className="h-4 w-4" aria-hidden />
               {running ? "Running…" : "Run command"}
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </Section>
   );

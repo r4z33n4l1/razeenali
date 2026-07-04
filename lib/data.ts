@@ -1,7 +1,7 @@
 export const site = {
   name: "Razeen Ali",
   tagline: "ships things that work",
-  bio: "Full-stack engineer building AI-native mobile apps and web SaaS. Been at it since 12 — robotics world champ, three startups, thousands of users. Currently MTS at 8090 Solutions (Software Factory) and still shipping side projects at unreasonable hours.",
+  bio: "Full-stack engineer. AI-native mobile apps, web SaaS, side projects at odd hours. MTS at 8090. Built stuff since 12 — robotics worlds, a few startups, thousands of users. Still going.",
   email: "contact@razeenali.com",
   location: "Toronto, ON",
   curlCommand: "curl -s https://razeenali.com/api/summary",
@@ -9,7 +9,7 @@ export const site = {
 
 export const workAreas = [
   "Mobile apps, Expo, React Native, App Store",
-  "Web SaaS, Next.js, Supabase, payments",
+  "Web SaaS, Next.js, APIs, payments",
   "AI agents, developer tools, SDLC automation",
   "Regulated industries, audit trails, compliance",
   "Retention, subscriptions, partner onboarding",
@@ -116,15 +116,12 @@ export const socialLinks = [
 export const curlSummary = `razeen ali — full-stack engineer, toronto
 
 > ships ai-native mobile apps + web saas
-> day job: mts @ 8090 solutions (software factory for regulated enterprises)
-> side quests: expo apps, supabase, ai agents, tools nobody asked for
+> day job: mts @ 8090 (software factory, regulated stuff)
+> side quests: expo apps, ai agents, random tools
 
-stack: react native, expo, next.js, supabase, typescript, python, aws
+stack: react native, expo, next.js, typescript, python, aws
 notable: first global robotics world champion (2020)
-startups: tara social (1k users), starcon (500), slate (in beta)
-live tools: filezap.dev, qrmaker.fyi, trywrench.com
+startups: tara social (1k), starcon (500), slate (beta)
+live: filezap.dev, qrmaker.fyi, trywrench.com
 
-vibe: move fast, ship often, clean architecture, low-text websites
-contact: contact@razeenali.com
-
-— end of transmission. go build something.`;
+contact: contact@razeenali.com`;

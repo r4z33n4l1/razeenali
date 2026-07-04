@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Code2, ExternalLink } from "lucide-react";
 import { projects } from "@/lib/data";
 import { Section } from "./Section";
@@ -17,23 +14,15 @@ export function Projects() {
     <Section
       id="projects"
       title="Projects"
-      subtitle="Deployed apps, shipped tools, things in motion."
+      subtitle="Live or close enough."
     >
       <div className="grid gap-4 sm:grid-cols-2">
-        {projects.map((project, i) => (
-          <motion.article
-            key={project.name}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.35, delay: (i % 4) * 0.05 }}
-            whileHover={{ y: -2 }}
-            className="rounded-xl border border-ink/8 bg-white p-5 transition hover:border-sage/35 hover:shadow-md"
-          >
+        {projects.map((project) => (
+          <article key={project.name} className="card-flat p-5">
             <div className="flex items-start justify-between gap-3">
               <h3 className="text-lg font-semibold text-ink">{project.name}</h3>
               {project.status ? (
-                <span className="shrink-0 rounded-full bg-sage/15 px-2.5 py-0.5 text-xs font-medium text-sage-dark">
+                <span className="shrink-0 border border-sage/30 bg-sage/10 px-2 py-0.5 text-xs font-medium text-sage-dark">
                   {statusLabel[project.status] ?? project.status}
                 </span>
               ) : null}
@@ -68,7 +57,7 @@ export function Projects() {
                 </a>
               ) : null}
             </div>
-          </motion.article>
+          </article>
         ))}
       </div>
     </Section>
