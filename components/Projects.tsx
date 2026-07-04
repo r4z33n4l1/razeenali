@@ -16,9 +16,9 @@ export function Projects() {
       title="Projects"
       subtitle="Live or close enough."
     >
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-2 sm:grid-cols-2">
         {projects.map((project) => (
-          <article key={project.name} className="card-flat p-5">
+          <article key={project.name} className="card-flat p-4">
             <div className="flex items-start justify-between gap-3">
               <h3 className="text-lg font-semibold text-ink">{project.name}</h3>
               {project.status ? (
@@ -27,13 +27,13 @@ export function Projects() {
                 </span>
               ) : null}
             </div>
-            <p className="mt-2 text-ink/70 leading-relaxed">
+            <p className="mt-1 text-ink/70 leading-snug">
               {project.description}
             </p>
             {project.tech ? (
-              <p className="mt-2 text-sm text-sage-dark/80">{project.tech}</p>
+              <p className="mt-1 text-sm text-sage-dark/80">{project.tech}</p>
             ) : null}
-            <div className="mt-4 flex flex-wrap gap-3">
+            <div className="mt-2 flex flex-wrap gap-3">
               {project.liveUrl ? (
                 <a
                   href={project.liveUrl}
