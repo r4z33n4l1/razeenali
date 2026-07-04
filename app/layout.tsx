@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description:
     "Full-stack engineer shipping AI-native mobile apps and web SaaS. React Native, Expo, AI agents. Toronto.",
   authors: [{ name: "Razeen Ali" }],
+  metadataBase: new URL("https://razeenali.com"),
   openGraph: {
     title: "Razeen Ali – Full-Stack Engineer",
     description:
@@ -27,11 +28,20 @@ export const metadata: Metadata = {
     siteName: "Razeen Ali",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Razeen Ali — ships things that work",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@razeenali_",
     creator: "@razeenali_",
+    images: ["/twitter-image"],
   },
 };
 
