@@ -89,8 +89,8 @@ export function CurlTerminal() {
           </button>
         </div>
 
-        <div className="card-flat overflow-hidden border-ink/15 bg-[#1a1a1a] shadow-[4px_4px_0_rgb(26_26_26_/_0.12)]">
-          <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+        <div className="terminal-panel overflow-hidden">
+          <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 bg-[#141414]">
             <span className="h-2.5 w-2.5 bg-[#ff5f57]" />
             <span className="h-2.5 w-2.5 bg-[#febc2e]" />
             <span className="h-2.5 w-2.5 bg-[#28c840]" />
@@ -100,20 +100,22 @@ export function CurlTerminal() {
             </span>
           </div>
 
-          <div
+          <pre
             className="min-h-[260px] p-4 sm:p-5 font-mono text-sm sm:text-[15px] text-[#e8e8e8] leading-relaxed whitespace-pre-wrap"
             aria-live="polite"
             aria-label="Terminal output"
           >
-            {output || (
-              <span className="text-white/40">press run.</span>
+            {output ? (
+              <span className="text-[#e8e8e8]">{output}</span>
+            ) : (
+              <span className="text-white/50">press run.</span>
             )}
             {showCursor ? (
               <span className="inline-block w-2 h-4 ml-0.5 bg-sage align-middle" />
             ) : null}
-          </div>
+          </pre>
 
-          <div className="border-t border-white/10 px-4 py-3">
+          <div className="border-t border-white/10 bg-[#141414] px-4 py-3">
             <button
               type="button"
               onClick={runCommand}

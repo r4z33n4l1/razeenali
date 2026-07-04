@@ -47,3 +47,10 @@ body {
   box-shadow: 1px 1px 0 rgb(26 26 26 / 0.08);
   transform: translate(1px, 1px);
 }
+
+.terminal-panel {
+  border: 1px solid rgb(26 26 26 / 0.15);
+  background: #1a1a1a;
+  box-shadow: 4px 4px 0 rgb(26 26 26 / 0.12);
+  color: #e8e8e8;
+}
