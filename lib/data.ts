@@ -1,7 +1,7 @@
 export const site = {
   name: "Razeen Ali",
   tagline: "ships things that work",
-  bio: "Full-stack engineer. AI-native mobile apps, web SaaS, side projects at odd hours. MTS at 8090. Built stuff since 12 — robotics worlds, a few startups, thousands of users. Still going.",
+  bio: "Full-stack engineer shipping AI-native mobile apps and web SaaS. MTS at 8090. Built stuff since 12 — robotics worlds, a few startups, thousands of users. Still shipping.",
   email: "contact@razeenali.com",
   location: "Toronto, ON",
   curlCommand: "curl -s https://razeenali.com/api/summary",
@@ -116,7 +116,7 @@ export const curlSummary = `razeen ali — full-stack engineer, toronto
 
 > ships ai-native mobile apps + web saas
 > day job: mts @ 8090 (software factory, regulated stuff)
-> side quests: expo apps, ai agents, random tools
+> also ships: expo apps, ai agents, random tools
 
 stack: react native, expo, next.js, typescript, python, aws
 notable: first global robotics world champion (2020)
