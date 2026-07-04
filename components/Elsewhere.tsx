@@ -12,7 +12,7 @@ export function Elsewhere() {
               href={link.href}
               target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="group flex items-center justify-between px-5 py-4 hover:bg-ink/[0.02]"
+              className="group flex items-center justify-between px-5 py-4 hover:bg-white/[0.04]"
             >
               <div>
                 <span className="font-medium text-ink group-hover:text-sage">

@@ -1,19 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf8;
-  --foreground: #1a1a1a;
-  --sage: #5d704f;
-  --sage-dark: #465a3b;
-  --ink: #1a1a1a;
+  --background: #242424;
+  --foreground: #ececec;
+  --ink: #ececec;
+  --muted: #a3a3a3;
+  --card: #2f2f2f;
+  --sage: #8faa7e;
+  --sage-dark: #6d8563;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
   --color-sage: var(--sage);
   --color-sage-dark: var(--sage-dark);
-  --color-ink: var(--ink);
   --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-jetbrains);
 }
@@ -29,28 +33,28 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--sage) 35%, white);
+  background: color-mix(in srgb, var(--sage) 40%, transparent);
 }
 
 .card-flat {
-  border: 1px solid rgb(26 26 26 / 0.1);
-  background: #fff;
-  box-shadow: 3px 3px 0 rgb(26 26 26 / 0.06);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  background: var(--card);
+  box-shadow: 3px 3px 0 rgb(0 0 0 / 0.35);
 }
 
 .btn-flat {
-  border: 1px solid rgb(26 26 26 / 0.12);
-  box-shadow: 2px 2px 0 rgb(26 26 26 / 0.08);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow: 2px 2px 0 rgb(0 0 0 / 0.3);
 }
 
 .btn-flat:active {
-  box-shadow: 1px 1px 0 rgb(26 26 26 / 0.08);
+  box-shadow: 1px 1px 0 rgb(0 0 0 / 0.3);
   transform: translate(1px, 1px);
 }
 
 .terminal-panel {
-  border: 1px solid rgb(26 26 26 / 0.15);
+  border: 1px solid rgb(255 255 255 / 0.06);
   background: #1a1a1a;
-  box-shadow: 4px 4px 0 rgb(26 26 26 / 0.12);
+  box-shadow: 4px 4px 0 rgb(0 0 0 / 0.45);
   color: #e8e8e8;
 }

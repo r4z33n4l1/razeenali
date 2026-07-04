@@ -38,7 +38,7 @@ export function Hero() {
         <button
           type="button"
           onClick={() => scrollTo("terminal")}
-          className="btn-flat inline-flex items-center gap-2 bg-white px-5 py-2.5 text-sm font-medium text-ink hover:border-sage hover:text-sage focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+          className="btn-flat inline-flex items-center gap-2 bg-card px-5 py-2.5 text-sm font-medium text-ink hover:border-sage hover:text-sage focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
         >
           <Terminal className="h-4 w-4" aria-hidden />
           Copy curl command
