@@ -8,12 +8,10 @@ export const site = {
 } as const;
 
 export const workAreas = [
-  "Mobile apps, Expo, React Native, App Store",
-  "Web SaaS, Next.js, APIs, payments",
-  "AI agents, developer tools, SDLC automation",
-  "Regulated industries, audit trails, compliance",
-  "Retention, subscriptions, partner onboarding",
-  "WhatsApp automation, campaigns, analytics",
+  "AI agents, skills, harness tooling",
+  "iOS + Expo mobile apps",
+  "Next.js tools that actually ship",
+  "Agent orchestration, dashboards",
 ] as const;
 
 export type Project = {
@@ -21,6 +19,7 @@ export type Project = {
   description: string;
   tech?: string;
   liveUrl?: string;
+  appStoreUrl?: string;
   githubUrl?: string;
   status?: "live" | "beta" | "sunset" | "oss";
 };
@@ -37,6 +36,8 @@ export const projects: Project[] = [
     description: "Modest fashion, AI recommendations, mobile-first",
     tech: "React Native, TypeScript, AI",
     liveUrl: "https://slatefashion.app",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/slate-the-modest-fashion-hub/id6752974390",
   },
   {
     name: "Filezap",
@@ -75,10 +76,17 @@ export const projects: Project[] = [
     status: "beta",
   },
   {
+    name: "Todo Wallpaper",
+    description: "Todos on your wallpaper, two taps, always visible",
+    tech: "Swift, App Intents, iOS",
+    appStoreUrl: "https://apps.apple.com/us/app/todowallpaper/id6744670787",
+  },
+  {
     name: "Ritual",
     description: "Habit tracking, routines, mobile",
     tech: "Expo, mobile",
     liveUrl: "https://ritual.caristudios.com",
+    appStoreUrl: "https://apps.apple.com/us/app/ritual-by-caristudios/id6757550661",
   },
   {
     name: "Schedulr",

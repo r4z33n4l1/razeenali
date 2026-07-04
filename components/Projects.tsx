@@ -45,6 +45,17 @@ export function Projects() {
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden />
                 </a>
               ) : null}
+              {project.appStoreUrl ? (
+                <a
+                  href={project.appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-sage-dark underline-offset-4 hover:underline"
+                >
+                  App Store
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                </a>
+              ) : null}
               {project.githubUrl ? (
                 <a
                   href={project.githubUrl}
