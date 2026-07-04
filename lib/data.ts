@@ -110,7 +110,6 @@ export const socialLinks = [
   { label: "X", href: "https://twitter.com/razeenali_", handle: "@razeenali_" },
   { label: "Email", href: "mailto:contact@razeenali.com", handle: "contact@razeenali.com" },
   { label: "Links", href: "https://razeenlinks.vercel.app", handle: "all projects" },
-  { label: "Resume", href: "/resume/RazeenDec2025v1.pdf", handle: "PDF" },
 ] as const;
 
 export const curlSummary = `razeen ali — full-stack engineer, toronto
