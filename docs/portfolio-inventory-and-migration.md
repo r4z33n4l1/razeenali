@@ -1,6 +1,6 @@
 # Portfolio inventory and migration plan
 
-Last verified: 2026-09-19
+Last verified: 2026-09-20
 
 ## Domain owners
 
@@ -34,9 +34,9 @@ FoodChecker is intentionally omitted: its hub page has no verified store or prod
 
 | Project | Status | Portfolio decision | Evidence and follow-up |
 | --- | --- | --- | --- |
-| FileZap browser compression | Maintained, unpublished | Do not label Live | Vercel production deployment is `READY` but protected; legacy `filezap.dev` does not resolve. Confirm the intended public flow before assigning a subdomain. |
-| QR Maker | Unverified | Do not label Live | Vercel deployment is `READY` but protected. `qrmaker.fyi` answers HTTP but has an expired domain record. Confirm ownership and user flow before migration. |
-| PDF Splitter | Maintained, unpublished | Do not label Live | Vercel deployment is `READY` but protected; `pdfsplitter.filezap.dev` does not resolve. |
+| FileZap browser compression | Live | Feature as a web tool | `https://filezap.razeenali.app` is attached to its Vercel project and returns HTTP 200. Legacy `filezap.dev` is configured to redirect when its DNS is restored. |
+| QR Maker | Live | Feature as a web tool | `https://qrmaker.razeenali.app` is attached to its Vercel project and returns HTTP 200. Its old domain is an expired landing page, so the new subdomain is canonical. |
+| PDF Splitter | Live | Feature as a web tool | `https://pdfsplitter.razeenali.app` is attached to its Vercel project and returns HTTP 200. The legacy subdomain is configured to redirect when its parent DNS is restored. |
 | Bengali Artistry Generator | Maintained, unpublished | Do not label Live | Vercel deployment is `READY` but protected; `banglaart.dev` does not resolve. |
 | Appointify | Broken | Archive / omit | Its former Vercel URL returns 404. |
 | Hotspot | Private | Omit | The repository is private, so it is not suitable for a public catalogue. |
