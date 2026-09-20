@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const ogAlt = "Razeen Ali — Engineer and product builder";
+export const ogAlt = "Razeen Ali — building Harnesses for agents and systems that help you";
 export const ogSize = { width: 1200, height: 630 };
 
 export function createOgImage() {
@@ -33,11 +33,11 @@ export function createOgImage() {
           Razeen Ali · Toronto, Canada
         </div>
         <div style={{ display: "flex", flexDirection: "column", maxWidth: 920 }}>
-          <div style={{ fontSize: 90, letterSpacing: "-0.055em", lineHeight: 0.98 }}>
-            Engineer and
+          <div style={{ fontSize: 72, letterSpacing: "-0.055em", lineHeight: 0.98 }}>
+            building Harnesses for agents
           </div>
-          <div style={{ color: "#0f766e", fontSize: 90, letterSpacing: "-0.055em", lineHeight: 0.98 }}>
-            product builder.
+          <div style={{ color: "#0f766e", fontSize: 72, letterSpacing: "-0.055em", lineHeight: 0.98 }}>
+            and systems that help you
           </div>
           <div
             style={{
@@ -49,7 +49,7 @@ export function createOgImage() {
               marginTop: 32,
             }}
           >
-            Focused software for the web and iPhone.
+            Razeen Ali · Toronto, Canada
           </div>
         </div>
         <div

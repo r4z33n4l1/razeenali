@@ -2,7 +2,7 @@ export const site = {
   name: "Razeen Ali",
   canonicalUrl: "https://razeenali.com",
   location: "Toronto, Canada",
-  positioning: "Engineer and product builder.",
+  positioning: "building Harnesses for agents and systems that help you",
   introduction: "I build focused software for the web and iPhone—tools with a clear purpose and a calm interface.",
 } as const;
 

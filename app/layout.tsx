@@ -10,14 +10,14 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://razeenali.com"),
-  title: { default: "Razeen Ali — Engineer and product builder", template: "%s — Razeen Ali" },
-  description: "Razeen Ali builds focused software for the web and iPhone.",
+  title: { default: "Razeen Ali — building Harnesses for agents and systems that help you", template: "%s — Razeen Ali" },
+  description: "building Harnesses for agents and systems that help you.",
   authors: [{ name: "Razeen Ali" }],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Razeen Ali — Engineer and product builder",
-    description: "Focused software for the web and iPhone.",
+    title: "Razeen Ali — building Harnesses for agents and systems that help you",
+    description: "building Harnesses for agents and systems that help you.",
     url: "/",
     siteName: "Razeen Ali",
     locale: "en_US",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Razeen Ali — Engineer and product builder",
+        alt: "Razeen Ali — building Harnesses for agents and systems that help you",
       },
     ],
   },
