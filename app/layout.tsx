@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -8,23 +8,17 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
 export const metadata: Metadata = {
-  title: "Razeen Ali – Full-Stack Engineer | AI-Native Apps & Web SaaS",
-  description:
-    "Full-stack engineer shipping AI-native mobile apps and web SaaS. React Native, Expo, AI agents. Toronto.",
-  authors: [{ name: "Razeen Ali" }],
   metadataBase: new URL("https://razeenali.com"),
+  title: { default: "Razeen Ali — Engineer and product builder", template: "%s — Razeen Ali" },
+  description: "Razeen Ali builds focused software for the web and iPhone.",
+  authors: [{ name: "Razeen Ali" }],
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Razeen Ali – Full-Stack Engineer",
-    description:
-      "AI-native mobile apps, web SaaS, and tools that actually ship.",
-    url: "https://razeenali.com",
+    title: "Razeen Ali — Engineer and product builder",
+    description: "Focused software for the web and iPhone.",
+    url: "/",
     siteName: "Razeen Ali",
     locale: "en_US",
     type: "website",
@@ -33,14 +27,12 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Razeen Ali — ships things that work",
+        alt: "Razeen Ali — Engineer and product builder",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@razeenali_",
-    creator: "@razeenali_",
     images: ["/twitter-image"],
   },
 };
@@ -51,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${jetbrains.variable} h-full antialiased`}>
+    <html lang="en" className={`${dmSans.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );
