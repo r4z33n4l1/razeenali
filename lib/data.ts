@@ -16,6 +16,14 @@ export const projects = [
   { slug: "todowallpaper", name: "TodoWallpaper", description: "A private, offline to-do list that exports as a phone wallpaper.", status: "live", productionUrl: "https://apps.apple.com/us/app/todowallpaper/id6744670787", technologies: ["iPhone", "iPad", "App Store"], featured: true, order: 4, image: { alt: "TodoWallpaper on the App Store", reference: "app-store" }, lastVerified: "2026-09-19" },
 ] as const satisfies readonly Project[];
 
+export type WebTool = { slug: string; name: string; description: string; productionUrl: string; technologies: readonly string[]; order: number; };
+
+export const webTools = [
+  { slug: "filezap", name: "FileZap", description: "Private, browser-based compression for PDFs and images.", productionUrl: "https://filezap.razeenali.app", technologies: ["Web tool", "Client-side"], order: 1 },
+  { slug: "pdfsplitter", name: "PDF Chapter Splitter", description: "Select, extract, and download chapters from a PDF in the browser.", productionUrl: "https://pdfsplitter.razeenali.app", technologies: ["Web tool", "Client-side"], order: 2 },
+  { slug: "qrmaker", name: "QR Maker", description: "Generate custom QR codes with logos, colors, and export options.", productionUrl: "https://qrmaker.razeenali.app", technologies: ["Web tool", "Browser"], order: 3 },
+] as const satisfies readonly WebTool[];
+
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com/r4z33n4l1" },
   { label: "LinkedIn", href: "https://ca.linkedin.com/in/razeenali" },
