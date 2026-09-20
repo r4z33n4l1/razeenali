@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
+const siteTitle = "Razeen Ali — building harnesses for agents and systems that help you";
+const siteDescription =
+  "Razeen Ali is a Member of Technical Staff at 8090 in Toronto, building harnesses for agents, systems, mobile apps, and web tools.";
+
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
@@ -10,14 +14,14 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://razeenali.com"),
-  title: { default: "Razeen Ali — building Harnesses for agents and systems that help you", template: "%s — Razeen Ali" },
-  description: "building Harnesses for agents and systems that help you.",
+  title: { default: siteTitle, template: "%s — Razeen Ali" },
+  description: siteDescription,
   authors: [{ name: "Razeen Ali" }],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Razeen Ali — building Harnesses for agents and systems that help you",
-    description: "building Harnesses for agents and systems that help you.",
+    title: siteTitle,
+    description: siteDescription,
     url: "/",
     siteName: "Razeen Ali",
     locale: "en_US",
@@ -27,12 +31,14 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Razeen Ali — building Harnesses for agents and systems that help you",
+        alt: siteTitle,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
     images: ["/twitter-image"],
   },
 };

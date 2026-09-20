@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const ogAlt = "Razeen Ali — building Harnesses for agents and systems that help you";
+export const ogAlt = "Razeen Ali — building harnesses for agents and systems that help you";
 export const ogSize = { width: 1200, height: 630 };
 
 export function createOgImage() {
@@ -34,7 +34,7 @@ export function createOgImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", maxWidth: 920 }}>
           <div style={{ fontSize: 72, letterSpacing: "-0.055em", lineHeight: 0.98 }}>
-            building Harnesses for agents
+            building harnesses for agents
           </div>
           <div style={{ color: "#0f766e", fontSize: 72, letterSpacing: "-0.055em", lineHeight: 0.98 }}>
             and systems that help you

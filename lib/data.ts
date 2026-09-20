@@ -1,7 +1,7 @@
 export const site = {
   name: "Razeen Ali",
   canonicalUrl: "https://razeenali.com",
-  positioning: "building Harnesses for agents and systems that help you · MTS at 8090 · Toronto, Canada",
+  positioning: "building harnesses for agents and systems that help you · MTS at 8090 · Toronto, Canada",
 } as const;
 
 export type WorkItem = {
@@ -29,10 +29,10 @@ export const experience = [
   { company: "8090", role: "MTS", dates: "May 2026–present", summary: "Platform and security for Software Factory." },
   { company: "Borderpass", role: "Software Developer (PEY Intern)", dates: "Sep 2024–Aug 2025", summary: "Built client-view impersonation, AI support deflection (60%+), and referral tooling (250+ users)." },
   { company: "Ramuri Inc.", role: "Software Developer", dates: "Jun–Sep 2022", summary: "Chrome extension and Django REST API for ethical clothing ratings." },
-  { company: "MCSS", role: "Software Developer", dates: "Sep 2023–present", summary: "Backend work for DeerHacks, serving 500+ participants." },
 ] as const satisfies readonly Experience[];
 
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com/r4z33n4l1" },
   { label: "LinkedIn", href: "https://ca.linkedin.com/in/razeenali" },
+  { label: "X", href: "https://x.com/razeenali01" },
 ] as const;
