@@ -1,28 +1,36 @@
 export const site = {
   name: "Razeen Ali",
   canonicalUrl: "https://razeenali.com",
-  location: "Toronto, Canada",
-  positioning: "building Harnesses for agents and systems that help you",
-  introduction: "I build focused software for the web and iPhone—tools with a clear purpose and a calm interface.",
+  positioning: "building Harnesses for agents and systems that help you · MTS at 8090 · Toronto, Canada",
 } as const;
 
-export type ProjectStatus = "live" | "maintained" | "archived";
-export type Project = { slug: string; name: string; description: string; status: ProjectStatus; productionUrl: string; repositoryUrl?: string; technologies: readonly string[]; featured: boolean; order: number; image: { alt: string; reference: "app-store" }; lastVerified: "2026-09-19"; };
+export type WorkItem = {
+  name: string;
+  description: string;
+  href: string;
+  label: "App Store" | "Open" | "Open source";
+};
 
-export const projects = [
-  { slug: "julie", name: "julie: cat translator", description: "An iPhone app that turns a cat photo into a playful translation.", status: "live", productionUrl: "https://apps.apple.com/us/app/julie-cat-translator/id6761346408", technologies: ["iPhone", "App Store"], featured: true, order: 1, image: { alt: "julie: cat translator on the App Store", reference: "app-store" }, lastVerified: "2026-09-19" },
-  { slug: "nag", name: "Nag: constant reminder", description: "A repeating-reminder app that keeps notifying until a task is done.", status: "live", productionUrl: "https://apps.apple.com/us/app/nag-constant-reminder/id6760954480", technologies: ["iPhone", "iPad", "App Store"], featured: true, order: 2, image: { alt: "Nag: constant reminder on the App Store", reference: "app-store" }, lastVerified: "2026-09-19" },
-  { slug: "slate", name: "Slate: The Modest Fashion Hub", description: "A shopping app for discovering modest outfits by style, occasion, and fit.", status: "live", productionUrl: "https://apps.apple.com/us/app/slate-the-modest-fashion-hub/id6752974390", technologies: ["iPhone", "App Store"], featured: true, order: 3, image: { alt: "Slate: The Modest Fashion Hub on the App Store", reference: "app-store" }, lastVerified: "2026-09-19" },
-  { slug: "todowallpaper", name: "TodoWallpaper", description: "A private, offline to-do list that exports as a phone wallpaper.", status: "live", productionUrl: "https://apps.apple.com/us/app/todowallpaper/id6744670787", technologies: ["iPhone", "iPad", "App Store"], featured: true, order: 4, image: { alt: "TodoWallpaper on the App Store", reference: "app-store" }, lastVerified: "2026-09-19" },
-] as const satisfies readonly Project[];
+export const workItems = [
+  { name: "Slate", description: "iPhone app for modest-fashion discovery.", href: "https://slate.razeenali.app", label: "Open" },
+  { name: "Ritual", description: "Movement log for Pilates, Lagree, yoga, and studio workouts.", href: "https://apps.apple.com/us/app/ritual-by-caristudios/id6757550661", label: "App Store" },
+  { name: "Software Factory", description: "AI-native software-development control plane.", href: "https://www.8090.ai/software-factory", label: "Open" },
+  { name: "Wrench", description: "Business software for HVAC shops.", href: "https://www.trywrench.com", label: "Open" },
+  { name: "FileZap", description: "Private browser-based file compression.", href: "https://filezap.razeenali.app", label: "Open" },
+  { name: "PDF Chapter Splitter", description: "Extract PDF chapters in the browser.", href: "https://pdfsplitter.razeenali.app", label: "Open" },
+  { name: "QR Maker", description: "Custom QR code generation with exports.", href: "https://qrmaker.razeenali.app", label: "Open" },
+  { name: "Schedulr", description: "Open-source scheduling project.", href: "https://github.com/r4z33n4l1/schedulr_v2", label: "Open source" },
+  { name: "Appointify", description: "Open-source appointment scheduling app.", href: "https://github.com/r4z33n4l1/Appointify", label: "Open source" },
+] as const satisfies readonly WorkItem[];
 
-export type WebTool = { slug: string; name: string; description: string; productionUrl: string; technologies: readonly string[]; order: number; };
+export type Experience = { company: string; role: string; dates: string; summary: string };
 
-export const webTools = [
-  { slug: "filezap", name: "FileZap", description: "Private, browser-based compression for PDFs and images.", productionUrl: "https://filezap.razeenali.app", technologies: ["Web tool", "Client-side"], order: 1 },
-  { slug: "pdfsplitter", name: "PDF Chapter Splitter", description: "Select, extract, and download chapters from a PDF in the browser.", productionUrl: "https://pdfsplitter.razeenali.app", technologies: ["Web tool", "Client-side"], order: 2 },
-  { slug: "qrmaker", name: "QR Maker", description: "Generate custom QR codes with logos, colors, and export options.", productionUrl: "https://qrmaker.razeenali.app", technologies: ["Web tool", "Browser"], order: 3 },
-] as const satisfies readonly WebTool[];
+export const experience = [
+  { company: "8090", role: "MTS", dates: "May 2026–present", summary: "Platform and security for Software Factory." },
+  { company: "Borderpass", role: "Software Developer (PEY Intern)", dates: "Sep 2024–Aug 2025", summary: "Built client-view impersonation, AI support deflection (60%+), and referral tooling (250+ users)." },
+  { company: "Ramuri Inc.", role: "Software Developer", dates: "Jun–Sep 2022", summary: "Chrome extension and Django REST API for ethical clothing ratings." },
+  { company: "MCSS", role: "Software Developer", dates: "Sep 2023–present", summary: "Backend work for DeerHacks, serving 500+ participants." },
+] as const satisfies readonly Experience[];
 
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com/r4z33n4l1" },
