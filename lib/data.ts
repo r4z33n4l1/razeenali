@@ -12,7 +12,6 @@ export type WorkItem = {
 };
 
 export const workItems = [
-  { name: "Slate", description: "iPhone app for modest-fashion discovery.", href: "https://slate.razeenali.app", label: "Open" },
   { name: "Ritual", description: "Movement log for Pilates, Lagree, yoga, and studio workouts.", href: "https://apps.apple.com/us/app/ritual-by-caristudios/id6757550661", label: "App Store" },
   { name: "Software Factory", description: "AI-native software-development control plane.", href: "https://www.8090.ai/software-factory", label: "Open" },
   { name: "Wrench", description: "Business software for HVAC shops.", href: "https://www.trywrench.com", label: "Open" },
