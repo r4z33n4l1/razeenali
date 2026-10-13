@@ -40,7 +40,8 @@ h1,h2,p { margin:0; }
 .contact-card > p { color:var(--muted); font-size:.925rem; }
 .contact-email { color:var(--ink); font:600 clamp(1.25rem,2.5vw,1.75rem)/1.1 var(--font-display); letter-spacing:-.025em; width:fit-content; }
 .contact-card .contact-list { margin:0; }
-.site-footer { color:var(--muted); font-size:.84rem; padding:16px 2px 0; }
+.site-footer { align-items:center; color:var(--muted); display:flex; font-size:.84rem; gap:16px; justify-content:space-between; padding:16px 2px 0; }
+.site-webring { --webring-color:var(--muted); --webring-accent:var(--accent); }
 
 @media (max-width:680px) { .site-shell { width:min(100% - 28px, 920px); padding-top:20px; } .compact-header { flex-direction:column; gap:22px; min-height:168px; } .header-actions { align-items:flex-start; flex-direction:row; justify-content:space-between; width:100%; } .nav-links { justify-content:flex-start; } .wordmark { font-size:2.125rem; } .index-section { padding:16px; } .index-list li { gap:2px; grid-template-columns:1fr; } .index-list a { width:max-content; } }
 @media (prefers-reduced-motion:no-preference) { a,.theme-toggle { transition:color .18s ease,border-color .18s ease,background .18s ease; } }

@@ -94,7 +94,11 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <footer className="site-footer">© {new Date().getFullYear()} Razeen Ali</footer>
+      <footer className="site-footer">
+        <span>© {new Date().getFullYear()} Razeen Ali</span>
+        <div data-webring="ca" data-member="razeen-ali" className="site-webring" />
+        <script src="https://webring.ca/embed.js" defer />
+      </footer>
     </main>
   );
 }
